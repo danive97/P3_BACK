@@ -23,7 +23,7 @@ class Tests_Equipo {
 	@Test
 	void Prueba_SO_nombre() {
 
-		Equipo equipo = new Equipo(1,"Portatil", "HP", "RRHH", "null", "11",
+		Equipo equipo = new Equipo(1,"Portatil", "HP", "RRHH", "Windows", "11",
 				"IntelI7", 8, 4, "HDD", 250, 13,
 				"4K", "Word", "12", "Volume",
 				"Adobe Photoshop", "10");

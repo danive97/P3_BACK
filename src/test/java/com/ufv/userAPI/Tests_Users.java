@@ -11,7 +11,7 @@ class Tests_Users {
 	@Test
 	void Prueba_Ciudad_Erroneo() {
 		User user = new User(1, "Daniel Ojeda", "Datamining", "123456789",
-							"daniel@gmail.com", "Desembarco del rey");
+							"daniel@gmail.com", "Madrid");
 
 		assertFalse("No has puesto una ciudad válida", user.getUbicacion() != "Madrid" &&
 																		user.getUbicacion() != "Sevilla" &&
