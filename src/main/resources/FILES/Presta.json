@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "id_user": 2,
+    "id_equipo": 2,
+    "fecha_inicio": "15/07/2021",
+    "fecha_fin": "30/07/2021",
+    "fecha_real": "31/07/2021",
+    "comentario": "Nada"
+  },
+  {
+    "id": 2,
+    "id_user": 1,
+    "id_equipo": 1,
+    "fecha_inicio": "15/06/2021",
+    "fecha_fin": "30/06/2021",
+    "fecha_real": "30/06/2021",
+    "comentario": "Bateria rota"
+  },
+  {
+    "id": 3,
+    "id_user": 3,
+    "id_equipo": 1,
+    "fecha_inicio": "15/04/2021",
+    "fecha_fin": "30/04/2021",
+    "fecha_real": "30/04/2021",
+    "comentario": "Nada"
+  }
+]
