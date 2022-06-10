@@ -4,5 +4,5 @@ COPY "./target/userAPI-0.0.1-SNAPSHOT.jar" "app.jar"
 COPY "./Users.json" "Users.json"
 COPY "./Presta.json" "Presta.json"
 COPY "./Equipo.json" "Equipo.json"
-EXPOSE 9091
+EXPOSE 9090
 ENTRYPOINT ["java", "-jar", "app.jar"]
