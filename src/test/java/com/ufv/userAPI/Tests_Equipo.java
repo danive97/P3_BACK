@@ -11,7 +11,7 @@ class Tests_Equipo {
 	@Test
 	void Prueba_Marca() {
 
-		Equipo equipo = new Equipo(1,"Portatil", "HP", "RRHH", "Windows 11", "12", "IntelI7", 8, 3, "HDD", 250, 13,
+		Equipo equipo = new Equipo(1,"Portatil", "ASUS", "RRHH", "Windows 11", "12", "IntelI7", 8, 3, "HDD", 250, 13,
 									"4K", "Word", "12", "Volume",
 									"Adobe Photoshop", "10");
 
