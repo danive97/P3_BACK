@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
+
 
 @RestController
 public class PrestController {
@@ -35,7 +35,7 @@ public class PrestController {
 
     public ResponseEntity nuevoPrestamo (@RequestBody Prestamo NewPrestamo){
         ArrayList<Prestamo> lista_prestamos = Getlista_prestamos();
-        NewPrestamo.setId((int) counter.getAndIncrement());
+        NewPrestamo.setId(counter.getAndIncrement());
         lista_prestamos.add(NewPrestamo);
         editarJSON(lista_prestamos);
 

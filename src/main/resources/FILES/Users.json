@@ -22,5 +22,21 @@
     "telefono": "987654321",
     "email": "carolinariquelme@gmail.com",
     "ubicacion": "Barcelona"
+  },
+  {
+    "id": 4,
+    "nombre": "Teresa Velasco",
+    "departamento": "Datamining",
+    "telefono": "132546879",
+    "email": "teresa@hotmail.com",
+    "ubicacion": "Sevilla"
+  },
+  {
+    "id": 5,
+    "nombre": "Jose Izquierdo",
+    "departamento": "Defensa",
+    "telefono": "032546872",
+    "email": "joseizquierdista@defensa.com",
+    "ubicacion": "Madrid"
   }
 ]

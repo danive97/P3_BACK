@@ -25,5 +25,23 @@
     "fecha_fin": "30/04/2021",
     "fecha_real": "30/04/2021",
     "comentario": "Nada"
+  },
+  {
+    "id": 4,
+    "id_user": 4,
+    "id_equipo": 2,
+    "fecha_inicio": "15/04/2021",
+    "fecha_fin": "30/04/2021",
+    "fecha_real": "30/04/2021",
+    "comentario": "Nada"
+  },
+  {
+    "id": 5,
+    "id_user": 2,
+    "id_equipo": 1,
+    "fecha_inicio": "15/04/2021",
+    "fecha_fin": "30/04/2021",
+    "fecha_real": "30/04/2021",
+    "comentario": "Nada"
   }
 ]

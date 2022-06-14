@@ -3,22 +3,22 @@ package com.ufv.userAPI;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.ArrayList;import com.google.gson.Gson;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
+
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.concurrent.atomic.AtomicInteger;
+
 
 
 @RestController
@@ -58,7 +58,7 @@ public class UserController {
 
     public ResponseEntity nuevoUsuario (@RequestBody User newUser) throws IOException{
         ArrayList<User> lista_users = GetListausers();
-        newUser.setId((int) counter.getAndIncrement());
+        newUser.setId(counter.getAndIncrement());
         lista_users.add(newUser);
         editarJSON(lista_users);
 
@@ -75,7 +75,7 @@ public class UserController {
     public ResponseEntity editarUsuario (@RequestBody User userEditado) throws IOException{
         ArrayList<User> lista_users = GetListausers();
 
-        int id = (int) userEditado.getId();
+        int id = userEditado.getId();
 
         for (User user : lista_users){
             if(user.getId() == id){
@@ -86,11 +86,11 @@ public class UserController {
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping(path = "/borradoUser")
-    public ResponseEntity borradoUser(int id) throws IOException{
+    @DeleteMapping(path = "/borradoUser/{id}")
+    public ResponseEntity borradoUser(@PathVariable int id) throws IOException{
         ArrayList<User> lista_users = GetListausers();
 
-        lista_users.remove(id);
+        lista_users.removeIf(user -> user.getId()==id);
 
         editarJSON(lista_users);
 
@@ -125,6 +125,7 @@ public class UserController {
     private void editarJSON(ArrayList<User> nuevosUsers){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         FileWriter file = null;
+        String newFile = null;
         try{
             file = new FileWriter("Users.json");
         }catch (IOException e){
