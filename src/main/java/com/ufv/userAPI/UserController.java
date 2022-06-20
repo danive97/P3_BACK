@@ -20,7 +20,8 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 
 
-
+//En esta clase, no he puesto comentarios, porque al final, hacemos lo mismo que hemos hecho en las otras dos clases
+//consultad las otras clases (Presta y Equipo) para ver los comentarios
 @RestController
 public class UserController {
 

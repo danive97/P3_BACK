@@ -2,7 +2,7 @@ package com.ufv.userAPI;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class Prestamo {
+public class Prestamo { //Defino un objeto prestamo con sus elementos
 
     @JsonProperty("id")
     private int id;
@@ -18,7 +18,7 @@ public class Prestamo {
     private String fecha_real;
     @JsonProperty("comentario")
     private String comentario;
-
+    //Defino los métodos Get and Set para cada uno de los elementos de mi objeto prestamo
     public long getId() {
         return id;
     }
@@ -75,9 +75,9 @@ public class Prestamo {
         this.comentario = comentario;
     }
 
-    public Prestamo() {
+    public Prestamo() {//Defino un constructor vacio
     }
-
+    //Defino un constructor con los elementos de mi objeto
     public Prestamo(int id, int id_user, int id_equipo, String fecha_inicio, String fecha_fin, String fecha_real,String comentario) {
         this.id = id;
         this.id_user = id_user;
@@ -87,7 +87,7 @@ public class Prestamo {
         this.fecha_real = fecha_real;
         this.comentario = comentario;
     }
-
+    //Defino un método ToString para establecer cómo debería salir cada uno de los datos que tengo en mi json
     @Override
     public String toString() {
         return "Prestamo{" +
@@ -99,7 +99,7 @@ public class Prestamo {
                 ", Comentarios='" + comentario+
                 "}";
     }
-
+    //Defino un método para editar un prestamo, tal y como nos piden en el enunciado
     public void editarPrestamo(Prestamo prestamoEditado){
         this.setId_user((int) prestamoEditado.getId_user());
         this.setId_equipo((int) prestamoEditado.getId_equipo());

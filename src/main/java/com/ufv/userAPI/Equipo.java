@@ -2,7 +2,7 @@ package com.ufv.userAPI;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Equipo {
+public class Equipo { //Creamos el objeto Equipo, con los distintos elementos que lo forman y con su tipo
 
     @JsonProperty("id_equipo")
     private int id_equipo;
@@ -41,6 +41,7 @@ public class Equipo {
     @JsonProperty("software_libre_v")
     private String software_libre_v;
 
+    //Definimos todos los Get and Set de cada elemento de nuestro objeto
     public int getid_equipo() {
         return id_equipo;
     }
@@ -184,11 +185,11 @@ public class Equipo {
     public void setSoftware_libre_v(String software_libre_v) {
         this.software_libre_v = software_libre_v;
     }
-
+    //Definimos un constructor vacio
     public Equipo(){
 
     }
-
+    //Definimos otro constructor, con los elementos de mi objeto
     public Equipo(int id_equipo, String tipo, String marca, String uso, String so_nombre, String so_version, String procesador, int ram, int ram_speed, String tipo_disco, int capacidad, int diagonal, String resolucion, String software_pago, String software_pago_v, String software_pago_t, String software_libre, String software_libre_v) {
         this.id_equipo = id_equipo;
         this.tipo = tipo;
@@ -209,7 +210,7 @@ public class Equipo {
         this.software_libre = software_libre;
         this.software_libre_v = software_libre_v;
     }
-
+    //Definimos este método, para poner cómo queremos que nos saque los datos por pantalla, en formato String
     @Override
     public String toString() {
         return "Equipo{"+

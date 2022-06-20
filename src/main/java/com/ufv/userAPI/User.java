@@ -1,7 +1,8 @@
 package com.ufv.userAPI;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+//No he puesto comentarios, porque sigue la misma dinámica que las otras dos clases (Prestamo y Equipo)
+//Para ver los comentarios, revisar las otras dos clases
 public class User {
 
     @JsonProperty("id")
